@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador Nacionalidade</title>
+</head>
+
+<body>
+    <h1>Sistema para verificar Nacionalidade</h1>
+    Digite o País de Origem <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="apurar()">
+    <div id="result"></div>
+
+    <script>
+        function apurar() {
+            var paisv = window.document.querySelector('input#txtpais')
+            var result = window.document.querySelector('div#result')
+            var nomePais = paisv.value
+            result.innerHTML = `<p>Vivendo em:<strong>${nomePais}</strong></p>`
+            if (nomePais == 'Brasil') {
+                result.innerHTML = `<p>Você é brasileiro!!!</p>`
+                } else {
+                result.innerHTML = `<p>Você é brasileiro!!!</p>`
+            }
+        }
+    </script>
+
+</body>
+
+</html>
